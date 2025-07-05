@@ -86,7 +86,7 @@ while cap.isOpened():
                 if sim > 0.9:
                     target_id = track_id
                     entry_frame = frame_idx
-                    print(f"[Frame {frame_idx}] ✅ Matched Target ID {track_id} | Similarity: {sim:.2f}")
+                    print(f"[Frame {frame_idx}]  Matched Target ID {track_id} | Similarity: {sim:.2f}")
             except:
                 continue
 
@@ -115,7 +115,7 @@ out.release()
 
 # === Final Report ===
 if entry_frame is not None:
-    print(f"\n✅ Target first seen at frame {entry_frame}")
-    print(f"🕒 Timestamp: {entry_frame / fps:.2f} seconds")
+    print(f"\n Target first seen at frame {entry_frame}")
+    print(f" Timestamp: {entry_frame / fps:.2f} seconds")
 else:
-    print("❌ Target not matched in any frame.")
+    print(" Target not matched in any frame.")
